@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Word of Hope Roxas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for responsiveness -->
   <style>
     body {
       margin: 0;
@@ -14,7 +15,7 @@
 
     .container {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 20px auto;
       background: rgba(255, 255, 255, 0.2);
       color: black;
       padding: 20px;
@@ -35,18 +36,18 @@
     .left {
       flex: 1;
       padding: 10px;
-      margin-left: 100px;
+      margin-left: 50px;
     }
 
     .left h1 {
-      font-size: 5em;
+      font-size: 4em;
       margin: 0;
       color: #0080ff;
     }
 
     .left h2 {
       font-family: 'Brush Script MT', cursive;
-      font-size: 5em;
+      font-size: 4em;
       margin: 10px 0;
       color: #0077cc;
     }
@@ -66,7 +67,8 @@
     }
 
     .logo {
-      width: 300px;
+      width: 250px;
+      max-width: 100%;
       height: auto;
     }
 
@@ -77,6 +79,14 @@
       padding-top: 10px;
       border-top: 2px solid #ddd;
       font-weight: bold;
+      flex-wrap: wrap;
+    }
+
+    .footer div {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px 0;
+      text-align: center;
     }
 
     .button-container {
@@ -92,6 +102,7 @@
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      display: inline-block;
     }
 
     .button:hover {
@@ -101,9 +112,10 @@
     .motto {
       margin-top: 20px;
       font-weight: bold;
-      color: #ffff;
+      color: #ffffff;
       text-align: center;
       font-size: 1.2em;
+      text-shadow: 0 0 5px #ffffff;
     }
 
     a {
@@ -113,6 +125,48 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left {
+        margin-left: 0;
+        padding: 10px;
+      }
+
+      .left h1,
+      .left h2 {
+        font-size: 3em;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer div {
+        margin: 10px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .left h1,
+      .left h2 {
+        font-size: 2.5em;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+
+      .motto {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
